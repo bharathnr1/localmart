@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LocalMart Lists</title>
+</head>
+<body>
+    <h1>List View</h1>
+    <table style="border: 1px solid black;">
+        <thead style="border: 1px solid black;">
+            <th style="border: 1px solid black;"> Product </th>
+            <th style="border: 1px solid black;"> Discription </th>
+            <th style="border: 1px solid black;"> Price </th>
+            <th style="border: 1px solid black;"> Add to Cart </th>
+            <th style="border: 1px solid black;"> Delete Product </th>
+            
+        </thead>
+        <tbody style="border: 1px solid black;">
+            {% for i in product_queryset %}
+            <tr style="border: 1px solid black;">
+                <td style="border: 1px solid black;"> {{ i.name }} </td>
+                <td style="border: 1px solid black;"> {{ i.dicription }} </td>
+                <td style="border: 1px solid black;"> {{ i.price }} </td>
+                <td><a href="{% url 'cart:updatecart' i.pk %}" style="border: 1px solid black;">Add</a></td>
+                <td><a href="{% url 'product:deleteview' i.pk %}" style="border: 1px solid black;">Delete</a></td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

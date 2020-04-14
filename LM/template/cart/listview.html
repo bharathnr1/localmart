@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LocalMart Lists</title>
+</head>
+<body>
+    <h1>List View</h1>
+
+    <table style="border: 1px solid black;">
+        <thead style="border: 1px solid black;">
+            <th style="border: 1px solid black;"> Product </th>
+            <th style="border: 1px solid black;"> Price </th>
+            <th style="border: 1px solid black;">  </th>
+        </thead>
+        <tfoot style="border: 1px solid black;">
+            <tr style="border: 1px solid black;">
+                <td style="border: 1px solid black;">Total: </td>
+                <td style="border: 1px solid black;">{{cart_queryset.total}} </td>
+            </tr>
+        </tfoot>
+        <tbody style="border: 1px solid black;">
+            {% if cart_queryset != None %}
+            {% for i in cart_queryset.product.all %}
+            <tr style="border: 1px solid black;">
+                <td style="border: 1px solid black;"> {{ i.name }} </td>
+                <td style="border: 1px solid black;"> {{ i.price }} </td>
+                <td><a href="{% url 'cart:updatecart' i.pk %}" style="border: 1px solid black;">Remove</a></td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+            {% else %}
+        <p>Cart is empty</p>
+            {% endif %}
+    </body>
+</html>
