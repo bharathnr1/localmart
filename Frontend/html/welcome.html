@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <!-- FontAwesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    
+
+    <link rel="stylesheet" href="../css/welcome.css">
+    <title>KiranaStore</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top laptop-navbar">
+        <a class="nav-link" href="./welcome.html" style="color: white; font-size: 22px; font-weight: 600;">KiranaStore <span class="sr-only">(current)</span></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+                <a class="nav-link" style="color: white;"> <span><i class="fa fa-sign-in-alt"></i></span> 
+                    <button data-toggle="modal" data-target="#loginmodal" style="
+                    background-color: transparent; 
+                    border: transparent; 
+                    color: white;
+                    outline: 0;">
+                    LogIn
+                    </button>
+                </a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="./customer_registration.html" style="color: white;"> <span><i class="fa fa-user"></i></span> New User?</a>
+                <!-- Alternate Icon - far fa-smile -->
+            </li>
+          </ul>
+
+        </div>
+    </nav>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="loginmodal" tabindex="-1" role="dialog" aria-labelledby="loginmodalTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <!-- <div class="modal-header">
+          <h5 class="modal-title" id="loginmodalTitle">Login</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div> -->
+        <div class="modal-body">
+            <form>
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Email address or Phone Number</label>
+                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputPassword1">Password</label>
+                  <input type="password" class="form-control" id="exampleInputPassword1">
+                </div>
+                <button type="submit" class="btn btn-success signin">Sign In</button>           
+              </form>
+        </div>
+        <div class="modal-footer">
+            <div class="btns">
+                <a href=""><button class="btn btn-success"> Login with OTP </button></a>
+                <a href=""><button class="btn btn-success"> Forgot Password? </button></a>
+              </div>  
+        </div>
+      </div>
+    </div>
+  </div>
+      
+
+    <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel" data-interval="false">
+        <ol class="carousel-indicators">
+          <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+          <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+          <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="../images/a.JPG" class="d-block w-100" alt="...">
+            <div class="carousel-caption">
+              <h5>First slide label</h5>
+              <h5><a href="./area_store_list.html">Dummy Login</a></h5>
+              <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="../images/b.JPG" class="d-block w-100" alt="...">
+            <div class="carousel-caption">
+              <h5>Second slide label</h5>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="../images/c.JPG" class="d-block w-100" alt="...">
+            <div class="carousel-caption lg_su">
+                <p>New to our app?</p>
+                <h5><a href="./customer_registration.html"><button class="btn" style="
+                  background-color: transparent; 
+                  border: transparent; 
+                  color: white;
+                  outline: 0;">
+                  SignUp
+                </button></a></h5>
+                <p>Already a member?</p>
+                <h5> <button data-toggle="modal" data-target="#loginmodal" style="
+                    background-color: transparent; 
+                    border: transparent; 
+                    color: white;
+                    outline: 0;">
+                    LogIn
+                    </button></h5>
+               
+                
+            </div>
+            
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+
+
+
+    <!-- <a href="./vendor_home.html">Vendor Home Page</a> -->
+
+    <!-- <div class="container ptos">
+        <h4 style="text-align: center; width: 100%;">Currently, we are available in the following areas:</h4>
+        <table>
+            <tr>
+                <td>T C Palya</td>
+                <td>Bhattarahalli</td>
+                <td>Basavanpura, K R Puram</td>
+                <td>Devasandra, K R Puram</td>
+            </tr>
+        </table>
+        <hr style="background-color: white; width: 75%;">
+        <p class="sugg">Don't see your area in the list?</p>
+        <a href="#"><button class="btn contact-us">Contact Us  <span><i class="fa fa-calendar-check" aria-hidden="true"></i></span></button></a>
+        <br>        
+    </div> -->
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.4/jquery.touchSwipe.min.js"></script>
+    <script>  
+        $(document).ready(function() {  
+            $(".carousel").swipe({
+
+                swipe: function(event, direction, distance, duration, fingerCount, fingerData) {
+
+                if (direction == 'left') $(this).carousel('next');
+                if (direction == 'right') $(this).carousel('prev');
+
+                },
+                allowPageScroll:"vertical"
+            });
+        });
+    </script> 
+  </body>
+</html>

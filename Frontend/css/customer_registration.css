@@ -1,0 +1,52 @@
+@media (max-width: 2560px){
+    html, body{
+        background: linear-gradient(90deg, #bdb9b9, #ebe6e6, #f3efef);
+    }
+    .login{
+        margin-top: 3%;
+        margin-left: 33%;
+        margin-right: 33%;
+        border: 1.33px solid #555555;
+        padding: 2em;
+        width: 33%;
+        /* background: linear-gradient(-45deg, #e6e3e3, #d6d6d6); */
+        background-color: rgb(245, 244, 244);
+        -webkit-box-shadow: 17px 4px 20px 10px rgba(0,0,0,0.39);
+        -moz-box-shadow: 17px 4px 20px 10px rgba(0,0,0,0.39);
+        box-shadow: 17px 4px 20px 10px rgba(0,0,0,0.39);
+    }
+    .login h4{
+        text-align: center;
+    }
+    .login button{
+        margin-left: 40%;
+        color: #fff;
+        background: linear-gradient(90deg, #32d859, #24b646, #0d8128);
+    }
+    .login button:hover{
+        color: rgb(241, 237, 237);
+        background: linear-gradient(90deg, #33c254, #28a745, #126d27);
+
+    }
+}
+
+@media (max-width: 767px){
+    .login{
+        border: 1.33px solid #555555;
+        width: 100%;
+        padding: 2em;
+        margin: 0 auto;
+        /* background: linear-gradient(-45deg, #e6e3e3, #d6d6d6); */
+        background-color: rgb(245, 244, 244);
+        -webkit-box-shadow: 17px 4px 20px 10px rgba(0,0,0,0.39);
+        -moz-box-shadow: 17px 4px 20px 10px rgba(0,0,0,0.39);
+        box-shadow: 17px 4px 20px 10px rgba(0,0,0,0.39);
+    }
+    .login h4{
+        text-align: center;
+    }
+    .login button{
+        margin-left: 35%;
+    }
+}
+

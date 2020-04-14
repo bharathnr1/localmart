@@ -1,0 +1,168 @@
+.first{
+    margin: 0 auto;
+    margin-top: 3em;
+    text-align: center;
+    border: 1px solid black;
+    padding: 1em;
+    width: 35em;
+    height: auto;
+}
+
+
+
+
+
+@media (max-width: 2560px){
+    /* Carousel Start */
+    html,body{
+        height:100%;   
+    }
+    .carousel,.carousel-item,.active{
+        height:100%;
+    }
+    .carousel-inner{
+        height:100%;
+    }
+    .carousel-inner>.carousel-item>img {
+        height:100%;
+    }
+    .carousel-caption .btn{
+        display: none;   
+    }
+    /* Carousel End */
+
+    /* Navbar */
+    .mobile_menu{
+        display: none;
+    }
+
+    /* Login Modal */
+    .modal-content{
+        background-color: rgb(245, 244, 244);
+    }
+
+    .modal-body{
+        padding: 1.5em;
+    }
+
+    .btns{
+        margin-right: 20%;
+    }
+
+    .signin{
+        margin-left: 40%; 
+        font-size: 20px;
+        background: linear-gradient(45deg, #33c254, #28a745, #126d27);
+    }
+
+    .btns .btn-success{
+        background: linear-gradient(45deg, #33c254, #28a745, #126d27);
+    }
+
+}
+
+@media (max-width: 767px){
+    /* Carousel Start */
+    html,body{
+        height:100%;   
+    }
+    .carousel,.carousel-item,.active{
+        height:100%;
+    }
+    .carousel-inner{
+        height:100%;
+    }
+    .carousel-inner>.carousel-item>img {
+        height:100%;
+    }
+    .carousel-control-prev-icon{
+        display: none;
+    }
+    .carousel-control-next-icon{
+        display: none;
+    }
+    .lg_su .btn{
+        display: inline;
+        border: 1px solid white;
+        color: black;
+        background-color: white;
+    }
+    .lg_su{
+        margin-bottom: 30%;
+    }
+    /* Carousel End */
+
+    /* Navbar */
+    .laptop-navbar{
+        display: none;
+    }
+    
+    /* Login Modal */
+    .modal-content{
+        background-color: rgb(245, 244, 244);
+        margin: 0 auto;
+    }
+
+    .btns{
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .btns button{
+        font-size: 14px;
+    }
+
+    .btns .btn-success{
+        background: linear-gradient(90deg, #33c254, #28a745, #126d27);
+    }
+
+    .signin{
+        margin-left: 36%; 
+        font-size: 16px;
+        background: linear-gradient(90deg, #32d859, #24b646, #0d8128);
+
+    }
+}
+
+
+
+ /* Available locations box at the bottom */
+ .ptos{
+    margin-top: 3em;
+    margin-bottom: 3em;
+    padding: 1em;
+    text-align: center;
+    background: linear-gradient(-45deg, #048b53, #10a03b, #1ae056);
+    /* background: linear-gradient(-45deg, #23a6d5, #23d5ab); */
+	/* background-size: 400% 400%; */
+    /* animation: gradient 5s ease infinite; */
+    color: white;
+    border-radius: 4px;
+}
+.ptos a{
+    margin: 0 auto;
+}
+.ptos h4{
+    margin-bottom: 1em;
+}
+
+.contact-us{
+    border: 1px solid white;
+    color: white;
+}
+.contact-us:hover{
+    background-color: white;
+    color: black;
+}
+
+table{
+    width: 100%;
+    margin: 2em;
+}
+
+table tr td{
+    text-align: center;
+}
+
+
+/* Available locations box end */

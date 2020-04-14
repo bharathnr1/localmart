@@ -1,0 +1,9 @@
+.first{
+    margin: 0 auto;
+    margin-top: 3em;
+    text-align: center;
+    border: 1px solid black;
+    padding: 1em;
+    width: 35em;
+    height: auto;
+}

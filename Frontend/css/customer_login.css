@@ -1,0 +1,21 @@
+.login{
+    margin-top: 10%;
+    margin-left: 33%;
+    margin-right: 33%;
+    border: 1.33px solid #555555;
+    padding: 2em;
+    width: 33%;
+    background: linear-gradient(-45deg, #e6e3e3, #d6d6d6);
+}
+
+.btns{
+    margin-left: 20%;
+}
+
+.btns button{
+    color: black;
+    background-color: #f5efef;
+    border: 1px solid black;
+    border-radius: 3px;
+    padding: 0.3em;
+}
