@@ -5,61 +5,692 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Store - (store name)</title>
 
-    <!-- JS -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/js/bootstrap-datepicker.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/css/datepicker.css"/>
-   
-    <!-- CSS -->
+    <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <!-- FontAwesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+
     <link rel="stylesheet" href='../css/store_main.css'>
    
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="nav-link" href="./welcome.html">LocalMart <span class="sr-only">(current)</span></a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav">
-            <li class="nav-item active">
-              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Customers</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Vendors</a>
-            </li>
-          </ul>
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item active">
-                <a class="nav-link" href="./cart.html"> <span><i class="fa fa-shopping-cart"></i></span> Cart</a>
-            </li>
-          </ul>
-        </div>
-    </nav>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top laptop-navbar">
+    <a class="navbar-brand" href="#">KiranaStore&nbsp&nbsp&nbsp</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a href="./welcome.html"> <span><i class="fa fa-map-marker-alt"></i></span>&nbsp Delivery Location</a>
+        </li>
+      </ul>
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item dropdown active">
+          <a class="nav-link dropdown-toggle" href="#" id="myaccount" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <span><i class="fa fa-user-alt "></i></span>&nbsp My Account
+          </a>
+          <div class="dropdown-menu" aria-labelledby="myaccount">
+            <a class="dropdown-item" href="#"><span><i class="fa fa-receipt"></i></span>&nbsp&nbsp My Orders</a>
+            <a class="dropdown-item" href="#"><span><i class="fa fa-address-card"></i></span>&nbsp My Address</a>
+            <a class="dropdown-item" href="#"><span><i class="fa fa-sign-out-alt"></i></span>&nbsp&nbsp Logout</a>
+          </div>
+        </li>
+        <li class="nav-item active">
+            <a class="nav-link" href=""> <span><i class="fa fa-shopping-cart"></i></span> Cart</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
 
-    <div class="first">
-        <h2>Welcome to (store name)</h2>
-        <h4>Phone Number</h4>
-        <h4>Address</h4>
+  <div class="mobile_menu_top fixed-top">
+    <div class="mm_t location"><a href="./welcome.html"> <span><i class="fa fa-map-marker-alt"></i></span>&nbsp Delivery Location</a></div>
+    <!-- In place of delivery location, the actual address will be shown - just the area -->
+    <div class="mm_t cart"><a href="./cart.html"> <span><i class="fa fa-shopping-cart"></i></span></a></div>
+  </div>
+
+  
+  <!-- Store Product Menu Start -->
+
+  <!-- Product Category 1 -->
+  <div class="panel-group">
+    <div class="panel panel-default panel-def-fir">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <!-- <a data-toggle="collapse" href="#productcat1">Shipment 1 </a> -->
+          <div class="product_cat" id="fir">
+            <a data-toggle="collapse" href="#productcat1">
+              <div class="card store_li flex-row">
+                <img class="" src="../images/d.png" alt="Card image cap" width="130px" height="130px">
+                <div class="card-block">
+                  <h5 class="card-title">Grocery </br>&</br> Staples</h5>
+                  <h6 class="card-subtitle text-muted ld"> Browse here to see all the items we consume everyday in our meals. Essentials for day-to-day food.</h6>
+                </div>
+              </div>
+              <!-- <div class="card-footer text-muted desc">
+                <p>Essentials for day-to-day food</p>
+              </div>
+              <div class="card-footer text-muted chev-down">
+                <span><i class="fa fa-chevron-down"></i></span>
+              </div>
+              <div class="card-footer text-muted chev-up">
+                <span><i class="fa fa-chevron-up"></i></span>
+              </div> -->
+          </a> 
+          </div> 
+        </h4>
+        
+      </div>
+      <div id="productcat1" class="panel-collapse collapse">
+        <div class="sub_product_category">
+
+          <a href="./products/products_pulses.html">
+          <div class="sub_product_cat">
+            <div class="card sub_cat">
+              <img src="../images/d.PNG" class="card-img-top" alt="...">
+              <div class="card-body">
+                <p class="card-text">Pulses</p>
+              </div>
+            </div>
+          </div>
+          </a>
+          
+      
+          <div class="sub_product_cat">
+            <div class="card sub_cat">
+              <img src="../images/d.png" class="card-img-top" alt="...">
+              <div class="card-body">
+                <p class="card-text">Spices</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="sub_product_cat">
+            <div class="card sub_cat">
+              <img src="../images/d.PNG" class="card-img-top" alt="...">
+              <div class="card-body">
+                <p class="card-text">Rice</p>
+              </div>
+            </div>
+          </div>    
+      
+          <div class="sub_product_cat">
+            <div class="card sub_cat">
+              <img src="../images/d.png" class="card-img-top" alt="...">
+              <div class="card-body">
+                <p class="card-text">Dry Fruits</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="sub_product_cat">
+            <div class="card sub_cat">
+              <img src="../images/d.PNG" class="card-img-top" alt="...">
+              <div class="card-body">
+                <p class="card-text">Oils</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="sub_product_cat">
+            <div class="card sub_cat">
+              <img src="../images/d.png" class="card-img-top" alt="...">
+              <div class="card-body">
+                <p class="card-text">Atta</p>
+              </div>
+            </div>
+          </div>   
+
+          <div class="sub_product_cat">
+            <div class="card sub_cat">
+              <img src="../images/d.PNG" class="card-img-top" alt="...">
+              <div class="card-body">
+                <p class="card-text">Salt</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="sub_product_cat">
+            <div class="card sub_cat">
+              <img src="../images/d.png" class="card-img-top" alt="...">
+              <div class="card-body">
+                <p class="card-text">Sugar</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
     </div>
-    <div class="second">
-        <h2>Here is the menu of items available in our store. </br> Please select the items you need.</h2>
-        <br><br>
-        <ul>
-            <li>Sugar</li>
-            <li>Jaggery</li>
-            <li>Rice</li>
-            <li>Wheat</li>
-            <li>Ragi</li>
-        </ul>
+  </div>
+
+<!-- 2 -->
+ <!-- Product Category 1 -->
+ <div class="panel-group">
+  <div class="panel panel-default panel-def-sec">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <!-- <a data-toggle="collapse" href="#productcat1">Shipment 1 </a> -->
+        <div class="product_cat" id="sec">
+
+          <a data-toggle="collapse" href="#productcat2">
+            <div class="card store_li flex-row">
+            <img class="" src="../images/f.png" alt="Card image cap" width="130px" height="130px">
+            <div class="card-block">
+              <h5 class="card-title">Household Items</h5>
+              <h6 class="card-subtitle text-muted ld"> Browse here to see all the items we need to keep our house hygienic. Essentials for a clean home.</h6>
+            </div>
+          </div>
+          <!-- <div class="card-footer text-muted desc">
+            <p>Essentials for a clean home</p>
+          </div>
+          <div class="card-footer text-muted chev-down">
+            <span><i class="fa fa-chevron-down"></i></span>
+          </div>
+          <div class="card-footer text-muted chev-up">
+            <span><i class="fa fa-chevron-up"></i></span>
+          </div> -->
+        </a> 
+        </div> 
+      </h4>
+      
     </div>
+    <div id="productcat2" class="panel-collapse collapse">
+      <div class="sub_product_category">
+
+        <div class="sub_product_cat">
+          <div class="card sub_cat">
+            <img src="../images/f.PNG" class="card-img-top" alt="...">
+            <div class="card-body">
+              <p class="card-text">Laundry</p>
+            </div>
+          </div>
+        </div>  
+    
+        <div class="sub_product_cat">
+          <div class="card sub_cat">
+            <img src="../images/f.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <p class="card-text">Dishwashers</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="sub_product_cat">
+          <div class="card sub_cat">
+            <img src="../images/f.PNG" class="card-img-top" alt="...">
+            <div class="card-body">
+              <p class="card-text">Cleaners</p>
+            </div>
+          </div>
+        </div>    
+    
+        <div class="sub_product_cat">
+          <div class="card sub_cat">
+            <img src="../images/f.PNG" class="card-img-top" alt="...">
+            <div class="card-body">
+              <p class="card-text">Repellents</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="sub_product_cat">
+          <div class="card sub_cat">
+            <img src="../images/f.PNG" class="card-img-top" alt="...">
+            <div class="card-body">
+              <p class="card-text">Pooja</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="sub_product_cat">
+          <div class="card sub_cat">
+            <img src="../images/f.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <p class="card-text">Fresheners</p>
+            </div>
+          </div>
+        </div>   
+
+        <div class="sub_product_cat">
+          <div class="card sub_cat">
+            <img src="../images/f.PNG" class="card-img-top" alt="...">
+            <div class="card-body">
+              <p class="card-text">Tissues</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="sub_product_cat">
+          <div class="card sub_cat">
+            <img src="../images/f.PNG" class="card-img-top" alt="...">
+            <div class="card-body">
+              <p class="card-text">Shoe Care</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Product Category 4 -->
+<div class="panel-group">
+  <div class="panel panel-default panel-def-thi">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <!-- <a data-toggle="collapse" href="#productcat1">Shipment 1 </a> -->
+        <div class="product_cat" id="thi">
+          <a data-toggle="collapse" href="#productcat4">
+            <div class="card store_li flex-row">
+              <img class="" src="../images/d.png" alt="Card image cap" width="130px" height="130px">
+              <div class="card-block">
+                <h5 class="card-title">Grocery </br>&</br> Staples</h5>
+                <h6 class="card-subtitle text-muted ld"> Browse here to see all the items we consume everyday in our meals. Essentials for day-to-day food.</h6>
+              </div>
+            </div>
+            <!-- <div class="card-footer text-muted desc">
+              <p>Essentials for day-to-day food</p>
+            </div>
+            <div class="card-footer text-muted chev-down">
+              <span><i class="fa fa-chevron-down"></i></span>
+            </div>
+            <div class="card-footer text-muted chev-up">
+              <span><i class="fa fa-chevron-up"></i></span>
+            </div> -->
+        </a> 
+        </div> 
+      </h4>
+      
+    </div>
+    <div id="productcat4" class="panel-collapse collapse">
+      <div class="sub_product_category">
+
+        <div class="sub_product_cat">
+          <div class="card sub_cat">
+            <img src="../images/d.PNG" class="card-img-top" alt="...">
+            <div class="card-body">
+              <p class="card-text">Pulses</p>
+            </div>
+          </div>
+        </div>  
+    
+        <div class="sub_product_cat">
+          <div class="card sub_cat">
+            <img src="../images/d.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <p class="card-text">Spices</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="sub_product_cat">
+          <div class="card sub_cat">
+            <img src="../images/d.PNG" class="card-img-top" alt="...">
+            <div class="card-body">
+              <p class="card-text">Rice</p>
+            </div>
+          </div>
+        </div>    
+    
+        <div class="sub_product_cat">
+          <div class="card sub_cat">
+            <img src="../images/d.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <p class="card-text">Dry Fruits</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="sub_product_cat">
+          <div class="card sub_cat">
+            <img src="../images/d.PNG" class="card-img-top" alt="...">
+            <div class="card-body">
+              <p class="card-text">Oils</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="sub_product_cat">
+          <div class="card sub_cat">
+            <img src="../images/d.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <p class="card-text">Atta</p>
+            </div>
+          </div>
+        </div>   
+
+        <div class="sub_product_cat">
+          <div class="card sub_cat">
+            <img src="../images/d.PNG" class="card-img-top" alt="...">
+            <div class="card-body">
+              <p class="card-text">Salt</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="sub_product_cat">
+          <div class="card sub_cat">
+            <img src="../images/d.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <p class="card-text">Sugar</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- 3 -->
+
+ <!-- Product Category 1 -->
+ <div class="panel-group">
+  <div class="panel panel-default panel-def-las">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <!-- <a data-toggle="collapse" href="#productcat1">Shipment 1 </a> -->
+        <div class="product_cat las">
+          <a data-toggle="collapse" href="#productcat3">
+            <div class="card store_li flex-row">
+            <img class="" src="../images/h.png" alt="Card image cap" width="130px" height="130px">
+            <div class="card-block">
+              <h5 class="card-title">Personal Care</h5>
+              <h6 class="card-subtitle text-muted ld"> Browse here to see all the items for your grooming needs. Essentials for day-to-day personal care.</h6>
+            </div>
+          </div>
+          <!-- <div class="card-footer text-muted desc">
+            <p>Essentials for personal care</p>
+          </div>
+          <div class="card-footer text-muted chev-down">
+            <span><i class="fa fa-chevron-down"></i></span>
+          </div>
+          <div class="card-footer text-muted chev-up">
+            <span><i class="fa fa-chevron-up"></i></span>
+          </div> -->
+        </a> 
+        </div> 
+      </h4>
+      
+    </div>
+    <div id="productcat3" class="panel-collapse collapse">
+      <div class="sub_product_category">
+
+        <div class="sub_product_cat">
+          <div class="card sub_cat">
+            <img src="../images/h.PNG" class="card-img-top" alt="...">
+            <div class="card-body">
+              <p class="card-text">Oral Care</p>
+            </div>
+          </div>
+        </div>  
+    
+        <div class="sub_product_cat">
+          <div class="card sub_cat">
+            <img src="../images/h.PNG" class="card-img-top" alt="...">
+            <div class="card-body">
+              <p class="card-text">Hair Care</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="sub_product_cat">
+          <div class="card sub_cat">
+            <img src="../images/h.PNG" class="card-img-top" alt="...">
+            <div class="card-body">
+              <p class="card-text">Skin Care</p>
+            </div>
+          </div>
+        </div>    
+    
+        <div class="sub_product_cat">
+          <div class="card sub_cat">
+            <img src="../images/h.PNG" class="card-img-top" alt="...">
+            <div class="card-body">
+              <p class="card-text">Bath & Body</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="sub_product_cat">
+          <div class="card sub_cat">
+            <img src="../images/h.PNG" class="card-img-top" alt="...">
+            <div class="card-body">
+              <p class="card-text">Fragrances</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="sub_product_cat">
+          <div class="card sub_cat">
+            <img src="../images/h.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <p class="card-text">Feminine</p>
+            </div>
+          </div>
+        </div>   
+
+        <div class="sub_product_cat">
+          <div class="card sub_cat">
+            <img src="../images/h.PNG" class="card-img-top" alt="...">
+            <div class="card-body">
+              <p class="card-text">Masculine</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="sub_product_cat">
+          <div class="card sub_cat">
+            <img src="../images/h.PNG" class="card-img-top" alt="...">
+            <div class="card-body">
+              <p class="card-text">Cosmetics</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 
+ For laptops 
+  <div class="product_category">
+
+    <div class="product_cat style_2">
+      <div class="card flex-row">
+        <img class="" src="../images/d.png" alt="Card image cap" width="130px" height="130px">
+        <div class="card-block">
+          <h5 class="card-title">Grocery & Staples</h5>
+          <h6 class="card-subtitle text-muted"> Dry Fruits & Nuts, Edible Oils, Spices, Salt & Sugar</h6>
+          <table>
+            <tr>
+              <td>
+              <ul>
+                <li>Pulses</li>
+                <li>Atta</li>
+                <li>Rice</li>
+               </ul>
+              </td>
+              <td>
+                <ul>
+                  <li>Dry Fruits</li>
+                  <li>Edible Oils</li>
+                  <li>Spices</li>
+                 </ul>
+                </td>
+                <td>
+                  <ul>
+                    <li>Salt</li>
+                    <li>Sugar</li>
+                    <li>and more..</li>
+                   </ul>
+                  </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div> 
+
+    <div class="product_cat style_2">
+      <div class="card flex-row">
+        <img class="" src="../images/g.png" alt="Card image cap" width="130px" height="130px">
+        <div class="card-block">
+          <h5 class="card-title">Personal Care</h5>
+          <h6 class="card-subtitle text-muted">Face Care, Health And Wellness, Cosmetics, New Launches</h6>
+          <table>
+            <tr>
+              <td>
+              <ul>
+                <li>Oral Care</li>
+                <li>Hair Care</li>
+                <li>Skin Care</li>
+               </ul>
+              </td>
+              <td>
+                <ul>
+                  <li>Bath & Body</li>
+                  <li>Fragrances</li>
+                  <li>Feminine</li>
+                 </ul>
+                </td>
+                <td>
+                  <ul>
+                    <li>Men's Grooming</li>
+                    <li>Cosmetics</li>
+                    <li>and more..</li>
+                   </ul>
+                  </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>    
+
+    <div class="product_cat style_2">
+      <div class="card flex-row">
+        <img class="" src="../images/f.PNG" alt="Card image cap" width="130px" height="130px">
+        <div class="card-block">
+          <h5 class="card-title">Household Items</h5>
+          <h6 class="card-subtitle text-muted">Tissues & Disposables, Shoe Care</h6>
+          <table>
+            <tr>
+              <td>
+              <ul>
+                <li>Laundry</li>
+                <li>Dishwashers</li>
+                <li>Cleaners</li>
+               </ul>
+              </td>
+              <td>
+                <ul>
+                  <li>Repellents</li>
+                  <li>Pooja</li>
+                  <li>Fresheners</li>
+                 </ul>
+                </td>
+                <td>
+                  <ul>
+                    <li>Tissues</li>
+                    <li>Shoe Care</li>
+                    <li>and more..</li>
+                   </ul>
+                  </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>    
+
+    <div class="product_cat style_2">
+      <div class="card flex-row">
+        <img class="" src="../images/g.PNG" alt="Card image cap" width="130px" height="130px">
+        <div class="card-block">
+          <h5 class="card-title">Home & Kitchen</h5>
+          <h6 class="card-subtitle text-muted"> Goods & Accessories, Stationery & Magazines</h6>
+          <table>
+            <tr>
+              <td>
+              <ul>
+                <li>Cookware</li>
+                <li>Containers</li>
+                <li>Tools</li>
+               </ul>
+              </td>
+              <td>
+                <ul>
+                  <li>Dining</li>
+                  <li>Bathroom</li>
+                  <li>Cleaning</li>
+                 </ul>
+                </td>
+                <td>
+                  <ul>
+                    <li>Electrical</li>
+                    <li>Stationery</li>
+                    <li>and more..</li>
+                   </ul>
+                  </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <br><hr><br>
+ -->
+  <!-- Store Product Menu End -->
+
+    <div class="mobile_menu_bottom fixed-bottom">
+      <div class="mm_b"><a href="./customer_login.html"> <span><i class="fa fa-home"></i></span></br> Home</a></div>
+      <div class="mm_b"><a href="./customer_login.html"> <span><i class="fas fa-store"></i></span></br> Stores</a></div>
+      <div class="mm_b"><a href="./customer_login.html"> <span><i class="fa fa-receipt"></i></span></br> Orders</a></div>
+      <div class="mm_b"><a href="./customer_login.html"> <span><i class="fa fa-user"></i></span></br> Account</a></div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.4/jquery.touchSwipe.min.js"></script>
+
+    <script>
+      jQuery(document).ready(function(){
+        $('.card').click(function(){
+          $('.card-footer').toggleClass('chev-down chev-up');
+        });
+        $('.card-footer').click(function(){
+          $('.card-footer').toggleClass('chev-down chev-up');
+        });
+
+        $( "#fir" ).click(function() {
+          // alert( "Handler for .click() called." );
+          // $(this)[0].scrollIntoView(({behavior: 'smooth', block: "center", inline: "nearest"}));
+          var elmnt = document.getElementById("fir");
+          elmnt.scrollIntoView(({ behavior: 'smooth', block: 'center' }));
+        });
+
+        $( "#sec" ).click(function() {
+         var elmnt = document.getElementById("sec");
+         elmnt.scrollIntoView(({ behavior: 'smooth', block: 'center' }));
+        });
+
+        $( "#thi" ).click(function() {
+         var elmnt = document.getElementById("thi");
+         elmnt.scrollIntoView(({ behavior: 'smooth', block: 'center' }));
+        });
+
+        $( "#las" ).click(function() {
+         var elmnt = document.getElementById("las");
+         elmnt.scrollIntoView(({ behavior: 'smooth', block: 'start' }));
+        });
+
+      });
+    </script>
 </body>
 </html>
